@@ -1,15 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor() { }
+  email: string;
+  password: string;
+  message: string;
 
-  ngOnInit() {
+  constructor() { 
+    console.log("constructor of login");
   }
+
+  onLoginClick()
+  {
+
+    if(this.email == "admin@gmail.com" && this.password == "manager")
+    {
+      this.message = "Successful Login";
+    }
+    else
+    {
+      this.message = "Invalid Login";
+    }
+
+  }
+
+
 
 }

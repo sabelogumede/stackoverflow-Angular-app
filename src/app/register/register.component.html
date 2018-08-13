@@ -1,3 +1,17 @@
-<p>
-  register works!
-</p>
+<div id="registerDiv">
+  <h3>Register</h3>
+  <form>
+    <label for="txEmail">Email:</label>
+    <input type="email" id="txEmail" [(ngModel)]="email" name="email"> <br>
+    <label for="txPersonName">PersonName:</label>
+    <input type="password" id="txPersonName" [(ngModel)]='personName' name="PersonName"> <br>
+    <label for="txPassword">Password:</label>
+    <input type="password" id="txPassword" [(ngModel)]='password' name="password"> <br>
+    <label for="txMobile">Mobile:</label>
+    <input type="tel" id="txMobile" [(ngModel)]='mobile' name="mobile"><br>
+    <label for="txAge">Age:</label>
+    <input type="tel" id="txAge" [(ngModel)]='age' name="age"><br>
+
+    <input type="submit" value="Register" (click)="onRegisterClick()">
+  </form>
+</div>

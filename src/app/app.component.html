@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
+<!-- <div>
   <h3>{{ title }}!</h3>
   <input type="button" value="Login" (clik)="login()"><br>
   <img [src]="path" width="50px;"><br>
@@ -14,7 +14,22 @@
   <app-questions-view></app-questions-view>
   <app-questions-new></app-questions-new>
 
+</div> -->
 
+<div>
+  <div id="header">
+    <h3><a routerLink="home">Stackoverflow</a></h3>
+    <a routerLink="home">Home</a>
+    <a routerLink="login">Login</a>
+    <a routerLink="register">Register</a>
+    <a routerLink="questions">Questions</a>
+    <a routerLink="newquestion">New Question</a>
+    <a routerLink="viewquestion">View Question</a>
+  </div>
+  <div id="pagecontent">
+    <router-outlet></router-outlet>
+  </div>
+  <div id="footer">footer</div>
 </div>
 
 
