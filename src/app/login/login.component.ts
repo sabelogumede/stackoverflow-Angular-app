@@ -19,7 +19,7 @@ export class LoginComponent {
   onLoginClick()
   {
 
-    if(this.email == "admin@gmail.com" && this.password == "manager")
+    if(this.CheckEmailAndPassword(this.email, this.password) == true )
     {
       this.message = "Successful Login";
     }
@@ -28,8 +28,19 @@ export class LoginComponent {
       this.message = "Invalid Login";
     }
 
+    private CheckEmailAndPassword(email:string, password:string): boolean 
+    {
+      var u = JSON.parse( localStorage.users );
+      var found: boolean = false;
+      for(var i = 0; i< u.length; i++) 
+      {
+        if (u[i].email == email && u[i].password == password)
+        {
+          found = true;
+        }
+      }
+      return found;
   }
-
 
 
 }

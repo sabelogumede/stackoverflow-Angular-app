@@ -1,17 +1,53 @@
 <div id="registerDiv">
   <h3>Register</h3>
   <form>
-    <label for="txEmail">Email:</label>
+    <label for="txEmail">Email: </label>
     <input type="email" id="txEmail" [(ngModel)]="email" name="email"> <br>
-    <label for="txPersonName">PersonName:</label>
-    <input type="password" id="txPersonName" [(ngModel)]='personName' name="PersonName"> <br>
-    <label for="txPassword">Password:</label>
-    <input type="password" id="txPassword" [(ngModel)]='password' name="password"> <br>
-    <label for="txMobile">Mobile:</label>
-    <input type="tel" id="txMobile" [(ngModel)]='mobile' name="mobile"><br>
-    <label for="txAge">Age:</label>
-    <input type="tel" id="txAge" [(ngModel)]='age' name="age"><br>
 
-    <input type="submit" value="Register" (click)="onRegisterClick()">
+    <label for="txPersonName">Person Name: </label>
+    <input type="text" id="txPersonName" [(ngModel)]='personname' name="personname"> <br>
+
+    <label for="txPassword">Password: </label>
+    <input type="password" id="txPassword" [(ngModel)]='password' name="password"> <br>
+
+    <label for="txMobile">Mobile: </label>
+    <input type="text" id="txMobile" [(ngModel)]='mobile' name="mobile"><br>
+
+    <label for="txDate">Date of Birth: </label>
+    <input type="text" id="txDate" [(ngModel)]='dateofbirth' size="2" name="dateofbirth">
+    <input type="text" id="txMonth" [(ngModel)]='monthofbirth' size="2" name="monthofbirth">
+    <input type="text" id="txYear" [(ngModel)]='yearofbirth' size="4" name="yearofbirth">
+    <br>
+
+    <label for="txAmount">Amount: </label>
+    <input type="text" id="txAmount" [(ngModel)]='amount' name="amount"><br>
+
+    <input type="checkbox" id="chkNewsLetter" [(ngModel)]='receivenewsletters' name="receivenewsletters">
+    <label for="chkNewsLetter">Receive News Letters</label><br>
+
+    <label for="rbGender">Gender</label>
+    <input type="radio" [(ngModel)]='gender' value="Male" name="gender" id="rbMale">
+    <label for="rbMale">Male</label>
+    <input type="radio" [(ngModel)]='gender' value="Female" name="gender" id="rbFemale">
+    <label for="rbFemale">Female</label>
+    <input type="radio" [(ngModel)]='gender' value="Other" name="gender" id="rbOther">
+    <label for="rbOther">Other</label><br>
+
+    <label for="drbCountry">Country: </label>
+    <select [(ngModel)]="country" name="country">
+      <option value="">Please Select</option>
+      <option>South Africa</option>
+      <option>Swaziland</option>
+      <option>Lesotho</option>
+      <option>Zimbabwe</option>
+      <option>Mozambiq</option>
+      <option>Botshwana</option>
+    </select> <br><br>
+
+    <!-- sunmit button -->
+    <input type="submit" value="Register" (click)="onRegisterClick()"> 
+    <input type="reset">
+    <br>
+    {{message}}
   </form>
 </div>
